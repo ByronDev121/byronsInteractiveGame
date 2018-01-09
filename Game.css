@@ -1,0 +1,21 @@
+.question {
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+.question-answer {
+	width: 100%;
+}
+
+.button {
+	width: 100%
+}
+
+.hide {
+	display: none ! important;
+}
+
+.heading {
+	margin-top:20px;
+}
+
