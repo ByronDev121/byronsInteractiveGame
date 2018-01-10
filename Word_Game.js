@@ -12,6 +12,7 @@ function submitAnswer() {
 	} else {
 		updateNextQuestion();
 	}
+	return false;
 }
 
 function validateAnswer() {
