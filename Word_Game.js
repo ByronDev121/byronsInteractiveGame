@@ -1,7 +1,7 @@
 // JavaScript for interative game:
 
 var questionNumber = 1;
-var questionAsked = "What was the day on 19 January 2018?";
+var questionAsked = "What is the day today";
 var questionCorrect = 0;
 var Rank = 'Bronze';
 var correctAnswer1 = "";
@@ -51,23 +51,26 @@ function answerQuestion() {
 	var answer = document.getElementById('answer').value;
 	
 	if (questionNumber == 1){
-		correctAnswer1 = "Tuesday"
+		var d = new Date();
+		var days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+		correctAnswer1 = (days[d.getDay()]);
+		
 	}
 	else if (questionNumber == 2){
 		correctAnswer1 = "three";
-		correctAnswer2 = "3";
+		correctAnswer2 = 3;
 	}
 	else if (questionNumber == 3){
 		correctAnswer1 = "cow";
 	}
 	else if (questionNumber == 4){
 		correctAnswer1 = "five";
-		correctAnswer2 = "5";
+		correctAnswer2 = 5;
 	}
 	else if (questionNumber == 5){
-		correctAnswer1 = "James Brown";
+		correctAnswer1 = "james brown";
 	}
-	if ( answer === correctAnswer1 || answer === correctAnswer2) {
+	if ( answer.toLowerCase() === correctAnswer1 || parseInt(answer) === correctAnswer2) {
 		var failAlert = document.getElementById('fail-alert-box');
 		failAlert.classList.add("hide");
 		var successAlert = document.getElementById('success-alert-box');
